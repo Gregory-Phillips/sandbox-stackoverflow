@@ -1,0 +1,456 @@
+<DOCTYPE html>
+<html = 'en'>
+    <head>
+        <style type="text/css">
+        .diamond {
+        background: white;
+        background: rgba(255,255,255,0.9);
+        position: fixed;
+        display: block;
+        padding: 8px;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        left: 50%;
+        top: 50%;
+        height: 462px;
+        width: 462px;
+        margin: -253px 0 0 -231px;
+        z-index: 3;
+        -webkit-box-shadow: 0 0 13px rgba(0,0,0,0.44);
+        -moz-box-shadow: 0 0 13px rgba(0,0,0,0.44);
+        box-shadow: 0 0 13px rgba(0,0,0,0.44);
+        overflow: hidden;
+        -webkit-transition: background .2s ease-in-out;
+        -moz-transition: background .2s ease-in-out;
+        -ms-transition: all 0.25s ease-out;
+        -o-transition: background .2s ease-in-out;
+        transition: background .2s ease-in-out;
+        }
+        .diamond:hover {
+        -webkit-transition: background .2s ease-in-out;
+        -moz-transition: background .2s ease-in-out;
+        -ms-transition: all 0.25s ease-out;
+        -o-transition: background .2s ease-in-out;
+        transition: background .2s ease-in-out;
+        background: #fff;
+        }
+        .diamond .home-link {
+        display: none;
+        height: 100%;
+        width: 100%;
+        z-index: 10;
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        }
+        .diamond
+        .inner {
+        width: 100%;
+        height: 100%;
+        border: 1px
+        solid #231f20;
+        float: left;
+        }
+        .diamond .sst-cross {
+        width: 362px;
+        height: 362px;
+        margin: -181px 0 0 -181px;
+        top: 50%;
+        left: 50%;
+        }
+        .diamond
+        #logo {
+        position: absolute;
+        display: block;
+        width: 143px;
+        height: 143px;
+        top: 50%;
+        left: 50%;
+        margin: -71px 0 0 -71px;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        z-index: 2;
+        }
+        .diamond #logo .logo-inner {
+        display: none;
+        }
+        .diamond .header-nav {
+        z-index: 1;
+        position: absolute;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 42px;
+        line-height: 1em;
+        letter-spacing: -0.03em;
+        font-family: 'MenschThin',Helvetica,Arial,sans-serif;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        }
+        .diamond .header-nav
+        ul {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        }
+        .diamond .header-nav
+        li {
+        display: block;
+        position: absolute;
+        width: 45%;
+        height: 45%;
+        top: auto;
+        left: auto;
+        overflow: hidden;
+        }
+        .diamond .header-nav li a,
+        .diamond .header-nav li a:link,
+        .diamond .header-nav li a:visited {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        position: absolute;
+        display: block;
+        width: 160%;
+        height: 160%;
+        top: 50%;
+        left: 50%;
+        margin: -80% 0 0 -80%;
+        text-align: center;
+        line-height: 345px;
+        color: #343434;
+        }
+        .diamond .header-nav li.current-menu-item a,
+        .diamond .header-nav li a:active,
+        .diamond .header-nav li a:hover {
+        color: #eb6262;
+        }
+        .diamond .header-nav li.menu-item-23 {
+        top: 0;
+        left: 0;
+        }
+        .diamond .header-nav li.menu-item-24 {
+        left: 0;
+        bottom: 0;
+        }
+        .diamond .header-nav li.menu-item-25 {
+        top: 0;
+        right: 0;
+        }
+        .diamond .header-nav li.menu-item-26 {
+        right: 0;
+        bottom: 0;
+        }
+        .diamond
+        .rotateinner {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 3;
+        }
+        .diamond .social-links.icons {
+        position: absolute;
+        width: 21px;
+        height: 20px;
+        padding: 5px;
+        top: 185px;
+        left: -15px;
+        }
+        .diamond.dark {
+        background-color: black;
+        background: rgba(0,0,0,0.9);
+        }
+        .diamond.dark .header-nav li a,
+        .diamond.dark .header-nav li a:link,
+        .diamond.dark .header-nav li a:visited {
+        color: #e6e6e6;
+        }
+        .diamond.dark .header-nav li.current-menu-item a,
+        .diamond.dark .header-nav li a:active,
+        .diamond.dark .header-nav li a:hover {
+        color: #eb6262;
+        }
+        .diamond.dark .sst-cross .sst-cross-line {
+        background-color: #e6e6e6;
+        }
+        .ie .diamond
+        #logo {
+        background: url("/wp-content/themes/secret-study-theme/BW/SecretStudy/resources/images/logo.png") center center no-repeat;
+        -pie-background: url("/wp-content/themes/secret-study-theme/BW/SecretStudy/resources/images/logo.png") center center no-repeat;
+        }
+        .ie7 .diamond,
+        .ie8
+        .diamond {
+        background: url("/wp-content/themes/secret-study-theme/BW/SecretStudy/resources/images/diamond.png") center center no-repeat;
+        -pie-background: url("/wp-content/themes/secret-study-theme/BW/SecretStudy/resources/images/diamond.png") center center no-repeat;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -o-transform: none;
+        -ms-transform: none;
+        transform: none;
+        width: 684px;
+        height: 684px;
+        margin: -358px 0 0 -342px;
+        }
+        .ie7 .diamond .inner,
+        .ie8 .diamond
+        .inner {
+        border: none;
+        position: relative;
+        }
+        .ie7 .diamond #logo,
+        .ie8 .diamond
+        #logo {
+        background: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -o-transform: none;
+        -ms-transform: none;
+        transform: none;
+        }
+        .ie7 .diamond .sst-cross,
+        .ie8 .diamond .sst-cross {
+        display: none;
+        }
+        .ie7 .diamond .header-nav li a,
+        .ie7 .diamond .header-nav li a:link,
+        .ie7 .diamond .header-nav li a:visited,
+        .ie8 .diamond .header-nav li a,
+        .ie8 .diamond .header-nav li a:link,
+        .ie8 .diamond .header-nav li a:visited {
+        position: relative;
+        display: block;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        height: 50%;
+        line-height: 154px;
+        text-align: center;
+        margin: -25% 0 0 -40%;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -o-transform: none;
+        -ms-transform: none;
+        transform: none;
+        }
+        .ie7 .diamond .header-nav li.menu-item-23,
+        .ie8 .diamond .header-nav li.menu-item-23 {
+        left: 50%;
+        top: 0;
+        margin-left: -22.5%;
+        }
+        .ie7 .diamond .header-nav li.menu-item-24,
+        .ie8 .diamond .header-nav li.menu-item-24 {
+        top: 50%;
+        left: 0;
+        margin-top: -22.5%;
+        }
+        .ie7 .diamond .header-nav li.menu-item-25,
+        .ie8 .diamond .header-nav li.menu-item-25 {
+        top: 50%;
+        right: 0;
+        margin-top: -22.5%;
+        }
+        .ie7 .diamond .header-nav li.menu-item-26,
+        .ie8 .diamond .header-nav li.menu-item-26 {
+        left: 50%;
+        bottom: 0;
+        margin-left: -22.5%;
+        }
+        .ie7 .diamond .rotateinner,
+        .ie8 .diamond
+        .rotateinner {
+        -webkit-transform: none;
+        -moz-transform: none;
+        -o-transform: none;
+        -ms-transform: none;
+        transform: none;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        z-index: 3;
+        }
+        .ie7 .diamond .social-links.icons,
+        .ie8 .diamond .social-links.icons {
+        position: absolute;
+        width: 50px;
+        height: 20px;
+        padding: 5px;
+        top: 185px;
+        left: -30px;
+        }
+        .ie7 .diamond .header-nav li
+        a {
+        margin-left: -100% !important;
+        }
+        #diamond .header-nav li a,
+        #diamond .header-nav li a:link,
+        #diamond .header-nav li a:visited {
+        line-height: 299px;
+        }
+        #diamond-small {
+        width: 133px;
+        height: 133px;
+        padding: 0;
+        margin: 0
+        0 0 -571px;
+        top: 40px;
+        z-index: 10;
+        -webkit-transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+        -ms-transition: all 0.25s ease-out;
+        -o-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        background-color: rgba(0,0,0,0.9);
+        }
+        #diamond-small:hover {
+        -webkit-transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+        -ms-transition: all 0.25s ease-out;
+        -o-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.8);
+        -moz-box-shadow: 0 0 20px rgba(0,0,0,0.8);
+        box-shadow: 0 0 20px rgba(0,0,0,0.8);
+        background-color: black;
+        }
+        #diamond-small
+        .inner {
+        border: none;
+        }
+        #diamond-small .sst-cross {
+        width: 106px;
+        height: 106px;
+        margin: -53px 0 0 -53px;
+        }
+        #diamond-small .sst-cross .sst-cross-line {
+        height: 1px;
+        }
+        #diamond-small .sst-cross .sst-cross-center {
+        height: 8px;
+        width: 8px;
+        margin: -4px 0 0 -4px;
+        }
+        #diamond-small .header-nav {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 15px;
+        line-height: 1em;
+        font-family: 'MenschRegular',Helvetica,Arial,sans-serif;
+        }
+        #diamond-small .header-nav li
+        a {
+        line-height: 96px;
+        }
+        .ie7 #diamond-small,
+        .ie8 #diamond-small {
+        background: url("/wp-content/themes/secret-study-theme/BW/SecretStudy/resources/images/diamond-small.png") 0px 0px no-repeat;
+        -pie-background: url("/wp-content/themes/secret-study-theme/BW/SecretStudy/resources/images/diamond-small.png") 0px 0px no-repeat;
+        width: 171px;
+        height: 171px;
+        padding: 18px;
+        top: 35px;
+        margin: 0
+        0 0 -611px;
+        }
+        .ie7 #diamond-small .inner,
+        .ie8 #diamond-small
+        .inner {
+        border: none;
+        position: relative;
+        }
+        .ie7 #diamond-small .sst-cross,
+        .ie8 #diamond-small .sst-cross {
+        display: none;
+        }
+        .ie7 #diamond-small .header-nav li a,
+        .ie8 #diamond-small .header-nav li
+        a {
+        line-height: 38px;
+        }
+        .home #diamond-small {
+        display: none;
+        }
+        body[data-touchscreen] #diamond-small .sst-cross .sst-cross-center {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+        height: 16px;
+        width: 16px;
+        margin-top: -8px;
+        margin-left: -8px;
+        background-color: #d5d4d4;
+        }
+        </style>
+    </head>
+    <body class="home page page-id-2 page-template-default  chrome  full" data-blog_name="Secret Study" data-blog_description="Connecting brands with musicians and artists" data-kal_img_src="http://secretstudy.ca/wp-content/themes/secret-study-theme/BW/SecretStudy/resources/images/kal-pattern-1.jpg" data-img_src="http://secretstudy.ca/wp-content/themes/secret-study-theme/BW/SecretStudy/resources/images/body-bg.jpg" data-img_width="600" data-img_height="400">
+        <header id="header"><div class="inner">
+            
+            <div id="diamond" class="diamond"><div class="inner">
+                
+                <h1 id="site-title">
+                <a id="logo" href="http://secretstudy.ca">
+                <img src="http://secretstudy.ca/wp-content/themes/secret-study-theme/BW/SecretStudy/resources/images/logo@2x.png" width="143" height="143" />
+                <span class="logo-inner">Secret Study</span>
+                </a>
+                </h1>
+                <nav id="main-nav" class="header-nav"><ul id="menu-main-nav" class="menu"><li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a title="About" href="http://secretstudy.ca/about/">About</a></li>
+                <li id="menu-item-24" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24"><a title="Services" href="http://secretstudy.ca/services">Services</a></li>
+                <li id="menu-item-25" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25"><a title="Clients" href="http://secretstudy.ca/clients">Clients</a></li>
+                <li id="menu-item-26" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26"><a title="Projects" href="http://secretstudy.ca/projects">Projects</a></li>
+            </ul></nav>
+            
+            <div class="rotateinner">
+                <ul class="social-links icons "><li class="social-link twitter "><a class="icon" href="http://twitter.com/secretstudy" target="_blank"><span class="text-content">Twitter</span></a></li></ul>            </div>
+                
+                <a href="http://secretstudy.ca" class="home-link" data-title="Secret Study | Connecting brands with musicians and artists"></a>
+                
+                
+                </div></div><!-- / #diamond -->
+                
+                
+                
+                <div id="diamond-small" class="diamond dark"><div class="inner">
+                    
+                    <nav id="main-nav-small" class="header-nav"><ul id="menu-main-nav-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a title="About" href="http://secretstudy.ca/about/">About</a></li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24"><a title="Services" href="http://secretstudy.ca/services">Services</a></li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25"><a title="Clients" href="http://secretstudy.ca/clients">Clients</a></li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26"><a title="Projects" href="http://secretstudy.ca/projects">Projects</a></li>
+                </ul></nav>
+                </div></div><!-- / #diamond -->
+                <div id="diamond-social"><div class="inner">
+                    
+                    <ul class="social-links icons big"><li class="social-link twitter "><a class="icon" href="http://twitter.com/secretstudy" target="_blank"><span class="text-content">Twitter</span></a></li><li class="social-link instagram "><span class="icon"><span class="text-content">Instagram</span></span></li></ul>
+                    <h4>Join this stream:</h4>
+                    <div class="social-links feeds">
+                    <p class="tweet"><a href="javascript:void(0)" data-url=" " data-text="%23secretstudy" data-related="secretstudy" class="twitter-share-button"><span class="sans-serif">#</span>secretstudy</a></p>            </div>
+                    <p><a href="http://secretstudy.ca/about" class="live-feed-close">Close Stream</a></p>
+                    </div></div><!-- / #diamond-social -->
+                    
+                    
+                    
+                </div></header>
+            </body>
+        </html>
